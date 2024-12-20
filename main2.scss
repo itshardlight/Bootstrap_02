@@ -1,0 +1,59 @@
+@import "../variable";
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+@mixin btn-theme($bg, $text) {
+  background-color: $bg;
+  color: $text;
+  border: none;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 4px;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  &.btn-primary {
+    @include btn-theme($primary, #ffffff);
+  }
+  &.btn-secondary {
+    @include btn-theme($secondary, #ffffff);
+  }
+  &.btn-success {
+    @include btn-theme($success, #ffffff);
+  }
+  &.btn-danger {
+    @include btn-theme($danger, #ffffff);
+  }
+  &.btn-warning {
+    @include btn-theme($warning, #000000);
+  }
+  &.btn-info {
+    @include btn-theme($info, #ffffff);
+  }
+  &.btn-light {
+    @include btn-theme($light, #000000);
+  }
+  &.btn-dark {
+    @include btn-theme($dark, #ffffff);
+  }
+  &.btn-link {
+    background: none;
+    color: $primary;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+  }
+}
